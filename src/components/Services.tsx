@@ -1,83 +1,74 @@
 import React from 'react';
-import { CheckCircle, Zap, Target, Users } from 'lucide-react';
+import { Palette, PenTool, Megaphone, Code, Image, Wand2 } from 'lucide-react';
 
-const features = [
+const services = [
   {
-    icon: Zap,
-    title: 'Lightning Fast',
-    description: 'AI-powered workflows that deliver results in record time without compromising quality.'
+    icon: Palette,
+    title: 'Branding',
+    description: 'Crafting unique brand identities that resonate with your audience and stand out in the market.'
   },
   {
-    icon: Target,
-    title: 'Precision Focused',
-    description: 'Every solution is tailored to your specific needs and business objectives.'
+    icon: PenTool,
+    title: 'Content Creation',
+    description: 'Engaging content that tells your story and connects with your customers across all platforms.'
   },
   {
-    icon: Users,
-    title: 'Collaborative Approach',
-    description: 'We work closely with you throughout the entire creative process.'
+    icon: Megaphone,
+    title: 'Marketing',
+    description: 'Strategic marketing campaigns that drive growth and maximize your digital presence.'
   },
   {
-    icon: CheckCircle,
-    title: 'Proven Results',
-    description: 'Track record of successful projects that drive engagement and growth.'
+    icon: Code,
+    title: 'Web Development',
+    description: 'Modern, responsive websites that deliver exceptional user experiences and drive results.'
+  },
+  {
+    icon: Image,
+    title: 'AI-Generated Images & Videos',
+    description: 'Cutting-edge AI visuals that bring your creative vision to life with stunning precision.'
+  },
+  {
+    icon: Wand2,
+    title: 'Creative Solutions',
+    description: 'Innovative approaches to complex creative challenges using the latest AI technologies.'
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-[#e6ebf1] to-[#cbd5de]">
+    <section id="services" className="py-20 bg-gradient-to-br from-[#e6ebf1] via-white to-[#cbd5de] relative overflow-hidden">
+    {/* <section id="services" className="py-20 bg-gradient-to-br from-[#e6ebf1] to-[#cbd5de]"> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Our Approach
+            What We Do
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage cutting-edge AI technology combined with human creativity to deliver 
-            exceptional results that exceed expectations.
+            We combine artificial intelligence with creative expertise to deliver comprehensive digital solutions
+            that elevate your brand and engage your audience.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
             <div
-              key={feature.title}
-              className="text-center group hover:scale-105 transition-transform duration-300"
-              style={{ animationDelay: `${index * 150}ms` }}
+              key={service.title}
+              className="group p-8 rounded-2xl bg-gradient-to-br from-[#e6ebf1] to-white hover:from-white hover:to-[#e6ebf1] transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border border-[#cbd5de]/30"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mb-6">
-                <div className="w-20 h-20 bg-gradient-to-r from-[#3ccedb] to-[#b184db] rounded-full flex items-center justify-center mx-auto group-hover:shadow-2xl transition-shadow duration-300">
-                  <feature.icon className="text-white" size={32} />
+                <div className="w-16 h-16 bg-gradient-to-r from-[#3ccedb] to-[#b184db] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="text-white" size={28} />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {feature.title}
+              <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#3ccedb] transition-colors duration-300">
+                {service.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {feature.description}
+                {service.description}
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Process Flow */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Our Process
-          </h3>
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
-            {['Discover', 'Create', 'Refine', 'Deliver'].map((step, index) => (
-              <div key={step} className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#3ccedb] shadow-lg mb-4">
-                  {index + 1}
-                </div>
-                <h4 className="text-lg font-semibold text-gray-800">{step}</h4>
-                {index < 3 && (
-                  <div className="hidden md:block absolute w-24 h-0.5 bg-gradient-to-r from-[#3ccedb] to-[#b184db] transform translate-x-20 translate-y-8"></div>
-                )}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
