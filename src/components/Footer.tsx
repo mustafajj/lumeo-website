@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Twitter, Linkedin, Instagram, Mail } from 'lucide-react';
+import { Heart, Facebook, Instagram, Linkedin, Music2 } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,17 +26,35 @@ const Footer = () => {
               through innovative technology and human creativity.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300">
+              <a 
+                href="https://www.instagram.com/lumeo.aistudio/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300"
+              >
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300">
-                <Mail size={18} />
+              <a 
+                href="https://www.facebook.com/share/1BGXwCnWD7/?mibextid=wwXIfr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300"
+              >
+                <Facebook size={18} />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@lumeo.aistudio" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300"
+              >
+                <Music2 size={18} />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#3ccedb] transition-colors duration-300"
+              >
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
