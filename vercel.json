@@ -22,9 +22,5 @@
       "src": "/(.*)",
       "dest": "/dist/$1"
     }
-  ],
-  "env": {
-    "ZOHO_EMAIL": "@zoho-email",
-    "ZOHO_PASSWORD": "@zoho-password"
-  }
+  ]
 }
