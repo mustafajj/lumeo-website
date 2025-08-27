@@ -20,7 +20,7 @@ const Contact = () => {
     setSubmitMessage('');
 
     try {
-      const response = await fetch('/api/contact.js', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
